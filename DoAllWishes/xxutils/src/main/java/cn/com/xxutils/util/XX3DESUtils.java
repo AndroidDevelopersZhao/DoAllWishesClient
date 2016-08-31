@@ -21,6 +21,12 @@ public class XX3DESUtils {
     private static int keySize = -1;/*密钥长度*/
     private static String workMode = null;//工作模式和填充模式
 
+    /**
+     * @param encryptTypeName 算法名称
+     * @param keySize         密钥长度
+     * @param workMode        工作模式和填充模式
+     * @return
+     */
     public static boolean setKeyInfo(String encryptTypeName, int keySize, String workMode) {
         boolean isOk = false;
         XX3DESUtils.encryptTypeName = encryptTypeName;
