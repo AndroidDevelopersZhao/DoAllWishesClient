@@ -47,8 +47,10 @@ public class XX3DESUtils {
             KeyGenerator keyGenerator = KeyGenerator.getInstance(encryptTypeName);
             keyGenerator.init(keySize);
             SecretKey secretKey = keyGenerator.generateKey();
+
             Log.d("密钥生成成功,(secretKey.getFormat()):" + secretKey.getFormat());
-            return secretKey.getEncoded();
+            Log.d("-------"+secretKey.toString());
+                    return secretKey.getEncoded();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             Log.e("3Des加密密钥生成失败，" + e.getMessage());
